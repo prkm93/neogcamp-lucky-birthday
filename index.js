@@ -12,7 +12,7 @@ btn.addEventListener('click', function(){
     const splitted = dateValue.split("-")
     const sum = Number(splitted[0]) + Number(splitted[1]) + Number(splitted[2]);
     
-    if(!numberValue.length && !dateValue.length) {
+    if(!(numberValue.length && dateValue.length)) {
         output.innerHTML = 'Please enter both fields'
     } else if (sum % (+numberValue) === 0) {
         output.innerHTML = `${numberValue} is a lucky number!!`;
@@ -21,3 +21,12 @@ btn.addEventListener('click', function(){
     } 
     
 })
+
+/**
+ * if both empty or either is empty.
+ *  date number
+ *   0  &&   0 - !0 = 1
+ *   0  &&   1 - !0 = 1
+ *   1  &&   0 - !0 = 1
+ *   1  &&   1 - !! = 0
+ */
