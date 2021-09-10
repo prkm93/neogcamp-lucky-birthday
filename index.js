@@ -15,9 +15,9 @@ btn.addEventListener('click', function(){
     if(!(numberValue.length && dateValue.length)) {
         output.innerHTML = 'Please enter both fields'
     } else if (sum % (+numberValue) === 0) {
-        output.innerHTML = `${numberValue} is a lucky number!!`;
+        output.innerHTML = `${numberValue} is a lucky number!!🥳🥳🥳`;
     } else if (sum % (+numberValue) !== 0 && Number(sum % (+numberValue))){
-        output.innerHTML = `${numberValue} isn't that lucky`;
+        output.innerHTML = `${numberValue} isn't that lucky😕`;
     } 
     
 })
